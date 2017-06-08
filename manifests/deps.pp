@@ -25,6 +25,9 @@ class awscli::deps (
     'Darwin': {
       include awscli::deps::osx
     }
+    'Windows': {
+      include awscli::deps::windows
+    }
     default:  { fail("The awscli module does not support ${::osfamily}") }
   }
 }
